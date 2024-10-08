@@ -13,6 +13,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Install dependencies
+        run: npm install
+        # Adicione este passo se seu projeto tem dependências
+
+      - name: Run tests
+        run: npm test
+        # Substitua este comando se você usar um framework diferente
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
